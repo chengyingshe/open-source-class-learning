@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torchinfo import summary
+import math
 
 class DoubleConv(nn.Module):
     def __init__(self, in_dim, out_dim, mid_dim=None):
@@ -93,7 +94,15 @@ class UNet(nn.Module):
         x = self.out(x)
         return x
     
-    
+class SinusoidalPositionalEmbedding(nn.Module):
+    """正弦位置编码"""
+    def __init__(self):
+        super().__init__()
+        
+    def forward(self, time):
+        
+        
+        return x
 
 if __name__ == "__main__":
     unet = UNet(3, 1)

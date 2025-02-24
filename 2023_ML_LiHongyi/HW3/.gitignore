@@ -1,3 +1,5 @@
 *
 !.gitignore
-!HW3.ipynb
+!*.ipynb
+!*.md
+!*.py

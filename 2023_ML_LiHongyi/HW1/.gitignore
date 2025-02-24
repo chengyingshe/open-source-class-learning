@@ -1,2 +1,8 @@
-models/
-runs/
+*
+!.gitignore
+!*.ipynb
+!*.md
+!*.py
+!covid_test.csv
+!covid_train.csv
+!pred.csv
