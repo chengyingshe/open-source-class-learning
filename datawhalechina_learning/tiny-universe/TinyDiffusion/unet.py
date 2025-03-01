@@ -94,10 +94,11 @@ class UNet(nn.Module):
         x = self.out(x)
         return x
     
-class SinusoidalPositionalEmbedding(nn.Module):
+class SinusoidalPositionEmbedding(nn.Module):
     """正弦位置编码"""
-    def __init__(self):
+    def __init__(self, dim):
         super().__init__()
+        self.dim = dim
         
     def forward(self, time):
         
