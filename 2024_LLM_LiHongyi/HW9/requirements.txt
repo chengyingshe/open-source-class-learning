@@ -1,0 +1,13 @@
+# Install packages.
+srt==3.5.3
+datasets==2.20.0
+DateTime==5.5
+OpenCC==1.1.7
+opencv-contrib-python==4.8.0.76
+opencv-python==4.8.0.76
+opencv-python-headless==4.10.0.84
+openpyxl==3.1.4
+openai==1.35.3
+# numpy==1.25.2
+soundfile==0.12.1
+anthropic==0.29.0

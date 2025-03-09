@@ -2,4 +2,5 @@
 !.gitignore
 !*.ipynb
 !*.md
-!*.py
+!step*.py
+!requirements.txt
