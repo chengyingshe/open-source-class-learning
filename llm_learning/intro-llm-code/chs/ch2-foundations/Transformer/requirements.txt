@@ -1,0 +1,6 @@
+python==3.8.20
+torch==1.7.1
+torchtext==0.8.1
+spacy==3.7.6
+numpy==1.24.3
+pandas==2.0.3

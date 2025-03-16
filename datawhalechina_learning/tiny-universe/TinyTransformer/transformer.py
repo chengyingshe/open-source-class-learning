@@ -24,14 +24,15 @@ class PositionalEncoding(nn.Module):
     def __init__(self, d_model, max_len):
         super().__init__()
         max_len = SEQ_MAX_LEN if max_len is None else max_len
-        self.encoding = torch.zeros(max_len, d_model, device=device)
-        self.encoding.requires_grad = False
+        encoding = torch.zeros(max_len, d_model)
+        encoding.requires_grad = False
         
         pos = torch.arange(0, max_len, dtype=torch.float).unsqueeze(1)
         _2i = torch.arange(0, d_model, 2, dtype=torch.float)
         
-        self.encoding[:, 0::2] = torch.sin(pos / 10000 ** (_2i / d_model))
-        self.encoding[:, 1::2] = torch.cos(pos / 10000 ** (_2i / d_model))
+        encoding[:, 0::2] = torch.sin(pos / 10000 ** (_2i / d_model))
+        encoding[:, 1::2] = torch.cos(pos / 10000 ** (_2i / d_model))
+        self.register_buffer('encoding', encoding)
 
     def forward(self, x):
         # [batch_size, seq_len]
@@ -54,8 +55,13 @@ class TransformerEmbedding(nn.Module):
         self.dropout = nn.Dropout(dropout, inplace=True)
     
     def forward(self, x):
+        print('###x:', x.shape)
         token_emb = self.token_emb(x)
+        print('###token_emb:', token_emb.shape)
+        
         pos_emb = self.pos_emb(x)
+        print('###pos_emb:', pos_emb.shape)
+        
         out = self.dropout(token_emb + pos_emb)
         return out
 
@@ -435,14 +441,19 @@ if __name__ == "__main__":
     lr = 1e-3
     dropout, batch_size, num_steps = 0.1, 64, 10
     
-    train_iter, src_vocab, trg_vocab = load_data(batch_size=batch_size, num_steps=num_steps)
+    # train_iter, src_vocab, trg_vocab = load_data(batch_size=batch_size, num_steps=num_steps)
     
-    model = Transformer(enc_vocab_size=len(src_vocab), 
-                        dec_vocab_size=len(trg_vocab), 
-                        n_head=n_heads, 
-                        d_model=d_model, 
-                        ffn_hidden_dim=d_ff, 
-                        n_layers=n_layers, trg_vocab_size=len(trg_vocab),
-                        dropout=dropout)
-    model = model.to(device)
-    train_model(model, train_iter, lr, num_epochs=50, trg_vocab=trg_vocab, device=device)
+    # model = Transformer(enc_vocab_size=len(src_vocab), 
+    #                     dec_vocab_size=len(trg_vocab), 
+    #                     n_head=n_heads, 
+    #                     d_model=d_model, 
+    #                     ffn_hidden_dim=d_ff, 
+    #                     n_layers=n_layers, trg_vocab_size=len(trg_vocab),
+    #                     dropout=dropout)
+    # model = model.to(device)
+    # train_model(model, train_iter, lr, num_epochs=50, trg_vocab=trg_vocab, device=device)
+    
+    emb = TransformerEmbedding(1000, 512, 100)
+    enc_in = torch.randint(0, 100, size=(1, 10))
+    dec_in = torch.randint(0, 100, size=(1, 10))
+    print(emb(enc_in), dec_in)

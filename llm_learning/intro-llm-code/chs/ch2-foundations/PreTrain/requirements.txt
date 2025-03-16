@@ -1,0 +1,5 @@
+python==3.10.16
+torch==2.5.1
+datasets==2.19.1
+tokenizers==0.20.1
+transformers==4.45.2

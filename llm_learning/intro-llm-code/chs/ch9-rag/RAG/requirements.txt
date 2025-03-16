@@ -1,0 +1,8 @@
+python==3.10.16
+langchain==0.3.19
+langchain-community==0.3.17
+langchain-ollama==0.2.3
+llama-index==0.12.19
+llama-index-embeddings-huggingface==0.5.1
+beautifulsoup4==4.13.3
+chromadb==0.6.3
