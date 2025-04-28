@@ -1,0 +1,5 @@
+zhipuai
+chromadb
+pymupdf
+langchain-community
+unstructured

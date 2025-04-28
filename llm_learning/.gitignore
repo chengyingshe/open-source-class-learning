@@ -1,4 +1,4 @@
 *
 !.gitignore
-!intro-llm-code/
-!intro-llm-code/**
+!notebook/
+!notebook/**

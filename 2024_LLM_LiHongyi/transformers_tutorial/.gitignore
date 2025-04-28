@@ -1,6 +1,5 @@
 *
 !.gitignore
+!*.ipynb
+!*.md
 !*.py
-!*.ok
-!ok
-!*/
