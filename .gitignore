@@ -1,5 +1,6 @@
 *
 !.gitignore
+!.gitmodules
 !README.md
 !2023_ML_LiHongyi/
 !2023_ML_LiHongyi/**
