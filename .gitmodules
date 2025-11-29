@@ -10,10 +10,6 @@
 	path = datawhalechina_learning/llm-universe
 	url = https://github.com/datawhalechina/llm-universe.git
 
-[submodule "joyful-pandas"]
-	path = datawhalechina_learning/joyful-pandas
-	url = https://github.com/datawhalechina/joyful-pandas.git
-
 [submodule "leedl-tutorial"]
 	path = dl/leedl-tutorial
 	url = https://github.com/datawhalechina/leedl-tutorial.git
@@ -29,3 +25,7 @@
 [submodule "datawhalechina_learning/joyful-pandas"]
 	path = datawhalechina_learning/joyful-pandas
 	url = https://github.com/datawhalechina/joyful-pandas.git
+
+[submodule "datawhalechina_learning/easy-rl"]
+	path = datawhalechina_learning/easy-rl
+	url = https://github.com/datawhalechina/easy-rl.git
