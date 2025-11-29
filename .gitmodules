@@ -1,28 +1,31 @@
-[submodule "datawhalechina_learning/thorough-pytorch"]
+[submodule "thorough-pytorch"]
 	path = datawhalechina_learning/thorough-pytorch
 	url = https://github.com/datawhalechina/thorough-pytorch.git
 
-[submodule "datawhalechina_learning/tiny-universe"]
+[submodule "tiny-universe"]
 	path = datawhalechina_learning/tiny-universe
 	url = https://github.com/datawhalechina/tiny-universe.git
 
-[submodule "datawhalechina_learning/llm-universe"]
+[submodule "llm-universe"]
 	path = datawhalechina_learning/llm-universe
 	url = https://github.com/datawhalechina/llm-universe.git
+
+[submodule "joyful-pandas"]
+	path = datawhalechina_learning/joyful-pandas
+	url = https://github.com/datawhalechina/joyful-pandas.git
+
+[submodule "leedl-tutorial"]
+	path = dl/leedl-tutorial
+	url = https://github.com/datawhalechina/leedl-tutorial.git
+
+[submodule "Hands-on-RL"]
+	path = rl/Hands-on-RL
+	url = https://github.com/boyu-ai/Hands-on-RL.git
+
+[submodule "blog_os"]
+	path = OS/blog_os
+	url = https://github.com/phil-opp/blog_os.git
 
 [submodule "datawhalechina_learning/joyful-pandas"]
 	path = datawhalechina_learning/joyful-pandas
 	url = https://github.com/datawhalechina/joyful-pandas.git
-
-[submodule "dl/leedl-tutorial"]
-	path = dl/leedl-tutorial
-	url = https://github.com/datawhalechina/leedl-tutorial.git
-
-[submodule "rl/Hands-on-RL"]
-	path = rl/Hands-on-RL
-	url = https://github.com/boyu-ai/Hands-on-RL.git
-
-[submodule "OS/blog_os"]
-	path = OS/blog_os
-	url = https://github.com/phil-opp/blog_os.git
-
